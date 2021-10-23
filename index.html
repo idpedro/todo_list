@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="/css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+    <title>Task Memento</title>
+  </head>
+  <body>
+    <header id="cabecalho">
+      <div class="container-fluid">
+        <img id="logo" src="assets/logo.svg" alt="Task Memento" />
+        <form action="" id="form-task">
+          <input
+            type="text"
+            class="form-task__input"
+            type="text"
+            placeholder="..minha nova tarefa"
+          />
+          <button type="submit" class="form-task__button">Nova Tarefa</button>
+        </form>
+      </div>
+    </header>
+    <main id="tela">
+      <div class="container">
+        <h1>Lista de Tarefas</h1>
+        <table class="task-table">
+          <thead>
+            <tr>
+              <th>ID</th>
+              <th>descrição</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>1</td>
+              <td>Jogar o Lixo</td>
+              <td>
+                <button class="btn btn__delete">
+                  <img src="assets/trash.svg" alt="" srcset="" />
+                  <span>Excluir</span>
+                </button>
+              </td>
+              <td>
+                <button class="btn btn__edit">
+                  <img src="assets/edit.svg" alt="" srcset="" />
+                  <span>Editar</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Jogar o Lixo</td>
+              <td>
+                <button class="btn btn__delete">
+                  <img src="assets/trash.svg" alt="" srcset="" />
+                  <span>Excluir</span>
+                </button>
+              </td>
+              <td>
+                <button class="btn btn__edit">
+                  <img src="assets/edit.svg" alt="" srcset="" />
+                  <span>Editar</span>
+                </button>
+              </td>
+            </tr>
+            <tr>
+              <td>1</td>
+              <td>Jogar o Lixo</td>
+              <td>
+                <button class="btn btn__delete">
+                  <img src="assets/trash.svg" alt="" srcset="" />
+                  <span>Excluir</span>
+                </button>
+              </td>
+              <td>
+                <button class="btn btn__edit">
+                  <img src="assets/edit.svg" alt="" srcset="" />
+                  <span>Editar</span>
+                </button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </main>
+  </body>
+</html>
