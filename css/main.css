@@ -1,0 +1,169 @@
+:root {
+  --green-400: #6cc551;
+  --green-650: #47624f;
+  --green-700: #334739;
+  --green-800: #29392e;
+  --aqua-500: #52ad9c;
+  --white-500: #ffffff;
+  /* button */
+  --red-500: #af4040;
+  --yellow-500: #af9d40;
+}
+
+/* inicio - Reset */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+button,
+a {
+  cursor: pointer;
+}
+button:hover {
+  filter: brightness(0.8);
+  transition: filter 0.4s;
+}
+/* fim - Reset */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+body {
+  background: var(--green-650);
+  font-family: "Poppins", sans-serif;
+}
+
+/* Classes Utilitarias */
+
+.container,
+.container-fluid {
+  width: min(80%, 1440px);
+  margin: 0 auto;
+  flex-wrap: wrap;
+}
+
+.container-fluid {
+  display: flex;
+  justify-content: space-between;
+  gap: 50;
+  align-items: center;
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+/* cabecalho = Header */
+#cabecalho {
+  width: 100%;
+}
+#cabecalho > .container-fluid {
+  margin: 2.5rem auto;
+}
+.form-task__input,
+.form-task__button {
+  font-size: 1rem;
+  padding: 0.5rem;
+  color: var(--white-500);
+  border: none;
+  font-weight: 700;
+}
+
+.form-task__input {
+  padding-left: 1rem;
+  background: var(--green-800);
+}
+.form-task__input::placeholder {
+  color: var(--green-650);
+}
+.form-task__input + .form-task__button {
+  margin-left: 0.25rem;
+}
+.form-task__button {
+  background: var(--green-400);
+  border-radius: 0.25rem;
+}
+
+/* TELA = main */
+
+h1 {
+  color: var(--white-500);
+  position: relative;
+}
+h1::before {
+  content: "";
+  display: block;
+  position: absolute;
+  background: var(--aqua-500);
+  width: 0.5rem;
+  height: 1.5em;
+  top: 0;
+  left: -1rem;
+}
+
+/* Task_table = table */
+.task-table {
+  text-align: center;
+  margin-top: 2rem;
+}
+.task-table > thead > tr > th {
+  font-size: 1.3rem;
+  padding: 1rem;
+  background: #334739c2;
+  text-transform: capitalize;
+}
+.task-table tr {
+  font-size: 1.1rem;
+  padding: 1rem;
+  background: #33473971;
+  color: var(--white-500);
+}
+.task-table tr:nth-of-type(even) {
+  background: #334739c2;
+}
+
+.task-table > tbody > tr > td {
+  font-size: 1.2rem;
+  padding: 0.5rem;
+}
+
+/* Button */
+.btn {
+  background: none;
+  padding: 0.5rem;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 0.5rem;
+  position: relative;
+}
+
+.btn > img {
+  width: 1.5rem;
+  object-fit: contain;
+}
+.btn span {
+  position: absolute;
+  opacity: 0;
+  user-select: none;
+  pointer-events: none;
+}
+.btn__edit {
+  background: var(--yellow-500);
+  color: var(--white-500);
+}
+
+.btn__delete {
+  background: var(--red-500);
+  color: var(--white-500);
+}
+
+@media (max-width: 965px) {
+  .container-fluid {
+    justify-content: center !important;
+    flex-direction: column;
+  }
+}
